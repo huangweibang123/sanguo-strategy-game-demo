@@ -1,0 +1,77 @@
+{
+    "window": {
+        "width": 960,
+        "height": 640,
+        "title": "三国志-霸王的大陆（简化复刻版）"
+    },
+    "colors": {
+        "bg":        [24, 34, 48],
+        "panel":     [45, 60, 80],
+        "panel_dark":[30, 42, 58],
+        "text":      [235, 238, 242],
+        "dim":       [150, 160, 175],
+        "highlight": [255, 215, 90],
+        "cao":       [90, 140, 230],
+        "liu":       [90, 210, 120],
+        "sun":       [240, 140, 90],
+        "neutral":   [140, 145, 155],
+        "line":      [90, 105, 125],
+        "danger":    [230, 80, 80]
+    },
+    "factions": {
+        "cao": {"name": "曹操", "color_key": "cao"},
+        "liu": {"name": "刘备", "color_key": "liu"},
+        "sun": {"name": "孙权", "color_key": "sun"}
+    },
+    "balance": {
+        "recruit_cost_per_1000": 200,
+        "recruit_max_per_action": 3000,
+        "food_consume_per_100_troops": 1,
+        "starve_troop_loss_ratio": 0.08,
+        "search_base_prob": 0.65,
+        "battle_base_loss": 0.28,
+        "fire_success_intel_factor": 1.2,
+        "retention_on_retreat": 0.7
+    },
+    "generals": [
+        {"id": "caocao",   "name": "曹操",   "force": 72, "intel": 91},
+        {"id": "xiahoudun","name": "夏侯惇", "force": 90, "intel": 60},
+        {"id": "xuchu",    "name": "许褚",   "force": 93, "intel": 40},
+        {"id": "simayi",   "name": "司马懿", "force": 60, "intel": 98},
+        {"id": "xunyu",    "name": "荀彧",   "force": 30, "intel": 96},
+
+        {"id": "liubei",   "name": "刘备",   "force": 75, "intel": 80},
+        {"id": "guanyu",   "name": "关羽",   "force": 97, "intel": 75},
+        {"id": "zhangfei", "name": "张飞",   "force": 98, "intel": 40},
+
+        {"id": "sunquan",  "name": "孙权",   "force": 72, "intel": 78},
+        {"id": "zhouyu",   "name": "周瑜",   "force": 75, "intel": 96},
+        {"id": "taishici", "name": "太史慈", "force": 92, "intel": 65},
+
+        {"id": "zhaoyun",  "name": "赵云",   "force": 96, "intel": 80},
+        {"id": "machao",   "name": "马超",   "force": 97, "intel": 50},
+        {"id": "huangzhong","name": "黄忠", "force": 94, "intel": 65},
+        {"id": "weiyan",   "name": "魏延",   "force": 88, "intel": 70},
+        {"id": "luxun",    "name": "陆逊",   "force": 70, "intel": 95},
+        {"id": "zhangliao","name": "张辽",   "force": 95, "intel": 85},
+        {"id": "lvbu",     "name": "吕布",   "force": 100,"intel": 30},
+        {"id": "zhugeliang","name": "诸葛亮", "force": 40, "intel": 100},
+        {"id": "pangtong", "name": "庞统",   "force": 35, "intel": 97}
+    ],
+    "cities": [
+        {"id": "beiping", "name": "北平", "gx": 0, "gy": 0, "owner": "neutral", "troops": 4000, "food": 3000, "generals": [], "hidden": ["zhaoyun"]},
+        {"id": "nangpi",  "name": "南皮", "gx": 1, "gy": 0, "owner": "cao",      "troops": 5000, "food": 4000, "generals": [], "hidden": ["zhangliao"]},
+        {"id": "jinyang", "name": "晋阳", "gx": 2, "gy": 0, "owner": "cao",      "troops": 5000, "food": 4000, "generals": [], "hidden": ["machao"]},
+        {"id": "xiapi",   "name": "下邳", "gx": 3, "gy": 0, "owner": "neutral", "troops": 4500, "food": 3000, "generals": ["lvbu"], "hidden": []},
+
+        {"id": "luoyang", "name": "洛阳", "gx": 0, "gy": 1, "owner": "cao",      "troops": 8000, "food": 6000, "generals": ["caocao", "xiahoudun", "xunyu"], "hidden": []},
+        {"id": "xuchang", "name": "许昌", "gx": 1, "gy": 1, "owner": "cao",      "troops": 6000, "food": 5000, "generals": ["xuchu", "simayi"], "hidden": []},
+        {"id": "jianye",  "name": "建业", "gx": 2, "gy": 1, "owner": "sun",      "troops": 8000, "food": 6000, "generals": ["sunquan", "zhouyu"], "hidden": []},
+        {"id": "lujiang", "name": "庐江", "gx": 3, "gy": 1, "owner": "neutral", "troops": 4000, "food": 3000, "generals": [],            "hidden": ["luxun"]},
+
+        {"id": "chengdu", "name": "成都", "gx": 0, "gy": 2, "owner": "liu",      "troops": 8000, "food": 6000, "generals": ["liubei", "guanyu", "zhangfei"], "hidden": ["zhugeliang"]},
+        {"id": "jianning","name": "建宁", "gx": 1, "gy": 2, "owner": "liu",      "troops": 5000, "food": 4000, "generals": [],            "hidden": ["huangzhong"]},
+        {"id": "chaisang","name": "柴桑", "gx": 2, "gy": 2, "owner": "sun",      "troops": 5000, "food": 4000, "generals": ["taishici"],   "hidden": ["pangtong"]},
+        {"id": "kuaiji",  "name": "会稽", "gx": 3, "gy": 2, "owner": "sun",      "troops": 5000, "food": 4000, "generals": [],            "hidden": ["weiyan"]}
+    ]
+}
